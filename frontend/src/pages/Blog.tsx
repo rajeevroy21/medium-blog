@@ -21,7 +21,8 @@ export const Blog = () => {
    }
    return (
       <div>
-         <FullBlog blog={blog} />
+         <Appbar />
+         {blog ? <FullBlog blog={blog} /> : <div className="h-screen flex items-center justify-center"><Spinner /></div>}
       </div>
    );
 };
