@@ -19,14 +19,14 @@ const Signin = () => {
   ) {
     e.preventDefault();
 
-    if (postInputs.username == "" || postInputs.password == "") {
+    if (postInputs.email == "" || postInputs.password == "") {
       return toast.error("Please fill all inputs");
     }
 
     try {
       const response = await toast.promise(
         axios.post(`${BACKEND_URL}/api/v1/user/signin`, {
-          username: postInputs.username,
+          email: postInputs.email,
           password: postInputs.password,
         }),
         {
@@ -44,31 +44,7 @@ const Signin = () => {
     }
   }
 
-  // async function handleGuestLogin(
-  //   e: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  // ) {
-  //   e.preventDefault();
-  //   try {
-  //     const response = await toast.promise(
-  //       axios.post(`${BACKEND_URL}/api/v1/user/signin`, {
-  //         username: `guest${Math.floor(Math.random() * 10000)}@gmail.com`,
-  //         password: "123456789sdf",
-  //       }),
-  //       {
-  //         loading: "Signing in...",
-  //         success: <b>Successfully signed in!</b>,
-  //         error: <b>Failed to sign in. Please check your credentials.</b>,
-  //       }
-  //     );
-  //     const jwt = await response.data.jwt;
-  //     localStorage.setItem("authorization", "Bearer " + jwt);
-  //     toast("Sign in success");
-  //     navigate("/blogs");
-  //   } catch (error) {
-  //     console.log(error);
-  //     toast.error("Invalid inputs");
-  //   }
-  // }
+ 
 
   return (
     <>
@@ -100,7 +76,7 @@ const Signin = () => {
                   onChange={(e) =>
                     setPostInputs((c: any) => ({
                       ...c,
-                      username: e.target.value,
+                      email: e.target.value,
                     }))
                   }
                 />
