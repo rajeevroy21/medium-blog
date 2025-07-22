@@ -8,7 +8,7 @@ importers:
 
   .:
     dependencies:
-      '@100xdevs/medium-common':
+      '@rajeevroy/medium-common':
         specifier: ^1.0.0
         version: 1.0.0
       axios:
@@ -78,7 +78,7 @@ importers:
 
 packages:
 
-  '@100xdevs/medium-common@1.0.0':
+  '@rajeevroy/medium-common@1.0.0':
     resolution: {integrity: sha512-HTK33afs+NxNIhnswObs/b5e2WMR+cmZis+r1U2ejsUiBHZDa/+rqhbVA/HlUpIp80J7Dt8rNP3SOO7d/U5OTA==}
 
   '@alloc/quick-lru@5.2.0':
@@ -1526,7 +1526,7 @@ packages:
 
 snapshots:
 
-  '@100xdevs/medium-common@1.0.0':
+  '@rajeevroy/medium-common@1.0.0':
     dependencies:
       zod: 3.23.8
 

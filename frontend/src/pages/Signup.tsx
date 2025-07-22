@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import LabeledInput from "../components/LabeledInput";
 import Quote from "../components/Quote";
 import { useState } from "react";
-import { SignupInput } from "@100xdevs/medium-common";
+import { SignupInput } from "@rajeevroy/medium-common";
 import { BACKEND_URL } from "../config";
 import { toast } from "react-hot-toast";
 import axios from "axios";
