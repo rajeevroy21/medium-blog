@@ -7,7 +7,7 @@ import LabeledInput from "./LabeledInput";
 const Auth = ({ type }: { type: "signup" | "signin" }) => {
     const [, setPostInputs] = useState({
         email: "",
-        username: "",
+        name: "",
         password: ""
     })
 
@@ -27,9 +27,9 @@ const Auth = ({ type }: { type: "signup" | "signin" }) => {
             </div>
 
             <div className="w-[50%] mt-2">
-                {type === "signup" ? <LabeledInput label="Username" placeholder="Rajeev" onChange={(e) => setPostInputs(c => ({
+                {type === "signup" ? <LabeledInput label="emial" placeholder="Rajeev" onChange={(e) => setPostInputs(c => ({
                     ...c,
-                    username: e.target.value
+                    email: e.target.value
                 }))} /> : null}
                 <LabeledInput label="Email" placeholder="Rajeevroy70701@gmail.com" onChange={(e) => setPostInputs(c => ({
                     ...c,
