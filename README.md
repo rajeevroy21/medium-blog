@@ -1,60 +1,75 @@
-# Medium Blogging Website
+# Medium Blog
 
-A fully functional Medium-style blogging website built with **React** and **TypeScript**. This project allows users to create, edit, and publish blog posts with a sleek and responsive UI.
+This project is a blog website similar to Medium, built with React for the frontend and Cloudflare Workers for the backend, using TypeScript, Prisma, PostgreSQL, and JWT for authentication.
 
-## 🚀 Features
-- 📝 Create, edit, and delete blog posts
-- 🔍 Search and filter articles
-- 🏷️ Tag-based categorization
-- 🔄 Infinite scrolling for seamless browsing
-- 📄 Rich text editor for blog content
-- 🎨 Fully responsive design
+## Table of Contents
 
-## 🛠️ Tech Stack
-- **Frontend:** React, TypeScript, Tailwind CSS
-- **State Management:** recoil
-- **Backend:** Node.js (Express) & MongoDB (Optional API integration)
-- **Deployment:** Vercel
+- [Technologies Used](##technologies-used)
+- [Features](##features)
+- [Getting Started](##getting-started)
+  - [Prerequisites](###prerequisites)
+  - [Installation](###installation)
+  - [Setting Up Environment Variables](###setting-up-environment-variables)
+- [Running Locally](###running-locally)
+## Technologies Used
 
-## 📦 Installation
+- **Frontend**:
+  - React
+  - Zod (validation library)
+  - TypeScript
+  - Tailwind (for styling)
+  - React Icons
+  - React Toastify
+
+- **Backend**:
+  - Cloudflare Workers
+  - TypeScript
+  - Prisma (ORM with connection pooling)
+  - PostgreSQL (as the database)
+  - JWT (for authentication)
+
+## Features
+
+- User authentication using JWT
+- CRUD operations for blog posts
+- Real-time updates using Cloudflare Workers
+- Validation of Backend types using Zod
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- PostgreSQL database
+
+### Installation
+
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/rajeevroy21/medium-blog.git
-   cd medium-blog
+```
+   git clone https://github.com/Piyush5784/Medium=blog.git
+```
+2. Navigate to the project directory:
+  ```
+  cd Frontend
+  ```
+3.Install dependencies:
    ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   # or
-   yarn install
+   npm i
    ```
-
-3. Start the development server:
-   ```bash
-   npm run dev
-   # or
-   yarn dev
+or
    ```
+  yarn install
+   ```
+4.Set up environment variables: <br />
+Create a .env file in the root directory with the following environment variables: 
+  ```
+  DATABASE_URL=your_postgres_database_url
+  JWT_SECRET=your_jwt_secret
+  ```
 
-4. Open the application in your browser at `http://localhost:3000`
+### Running Locally
 
-## 🔧 Configuration
-- Create a `.env` file and add necessary API keys if using a backend or Firebase authentication.
-
-## 📸 Screenshots
-![Homepage](![image](https://github.com/user-attachments/assets/55411292-b2e4-42d4-a9a5-43bba2eaa3a1)
-![Editor]![Screenshot 2025-03-04 025408](https://github.com/user-attachments/assets/0d63d7f4-96d2-428d-9248-c49b57733fae)
-
-## 📜 License
-This project is licensed under the MIT License.
-
-## 🤝 Contributing
-Contributions are welcome! Feel free to open issues and submit pull requests.
-
-## 📬 Contact
-For any queries, contact me via [LinkedIn]https://www.linkedin.com/in/rajeevroy21/ or [Email](mailto:rajeevroy70701@gmail.com).
-
----
-**Made with ❤️ using React & TypeScript**
-
+Start the development server:
+  ```
+  npm run dev
+  ```
