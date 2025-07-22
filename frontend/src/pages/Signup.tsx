@@ -11,7 +11,7 @@ import { IoMdArrowRoundBack } from "react-icons/io";
 const Signup = () => {
   const navigate = useNavigate();
   const [postInputs, setPostInputs] = useState<SignupInput>({
-    username: "",
+    email: "",
     password: "",
     name: "",
   });
@@ -20,7 +20,7 @@ const Signup = () => {
     e.preventDefault();
 
     if (
-      postInputs.username == "" ||
+      postInputs.email == "" ||
       postInputs.password == "" ||
       postInputs.name == ""
     ) {
@@ -29,7 +29,7 @@ const Signup = () => {
     try {
       const response = await toast.promise(
         axios.post(`${BACKEND_URL}/api/v1/user/signup`, {
-          username: postInputs.username,
+          email: postInputs.email,
           password: postInputs.password,
           name: postInputs.name,
         }),
@@ -88,7 +88,7 @@ const Signup = () => {
                   onChange={(e) =>
                     setPostInputs((c) => ({
                       ...c,
-                      username: e.target.value,
+                      email: e.target.value,
                     }))
                   }
                 />
