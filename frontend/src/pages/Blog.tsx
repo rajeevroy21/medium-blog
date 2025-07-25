@@ -2,8 +2,8 @@ import { useParams } from "react-router-dom";
 
 import useBlog from "../Hooks/UseBlog";
 import FullBlog from "../components/FullBlog";
-import BlogSkeleton from '@components/BlogSkeleton';
 import { Appbar } from "../components/Appbar";
+import { BlogSkeleton } from "../components/BlogSkeleton";
 
 const Blog = () => {
   const { id } = useParams<{ id: string }>();
