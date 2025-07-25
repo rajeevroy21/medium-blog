@@ -2,7 +2,7 @@ import { useRecoilValueLoadable } from "recoil";
 import { Appbar } from "../components/Appbar";
 import BlogCard from "../components/BlogCard";
 import { allBlogs } from "../Atoms/BlogAtom";
-import { AllBlogSkeleton } from "../components/AllBlogSkeleton";
+import { BlogSkeleton } from "../components/BlogSkeleton";
 
 export type Blog = {
   author: {
@@ -21,10 +21,12 @@ const Blogs = () => {
       <div>
         <Appbar />{" "}
         <div className="flex justify-center items-center m-5 flex-col lg:ml-[100px] gap-5">
-          <AllBlogSkeleton />
-          <AllBlogSkeleton />
-          <AllBlogSkeleton />
-          <AllBlogSkeleton />
+          <BlogSkeleton/>
+          <BlogSkeleton/>
+          <BlogSkeleton/>
+          <BlogSkeleton/>
+          <BlogSkeleton/>
+          <BlogSkeleton/>
         </div>
       </div>
     );
