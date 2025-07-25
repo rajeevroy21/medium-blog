@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import LabeledInput from "../components/LabeledInput";
 import Quote from "../components/Quote";
-import { SigninInput } from "@rajeevroy/medium-common";
+import { SigninInput } from "@100xdevs/medium-common";
 import axios from "axios";
 import { BACKEND_URL } from "../config";
 import { toast } from "react-hot-toast";
@@ -19,14 +19,14 @@ const Signin = () => {
   ) {
     e.preventDefault();
 
-    if (postInputs.email == "" || postInputs.password == "") {
+    if (postInputs.username == "" || postInputs.password == "") {
       return toast.error("Please fill all inputs");
     }
 
     try {
       const response = await toast.promise(
         axios.post(`${BACKEND_URL}/api/v1/user/signin`, {
-          email: postInputs.email,
+          username: postInputs.username,
           password: postInputs.password,
         }),
         {
@@ -44,7 +44,6 @@ const Signin = () => {
     }
   }
 
- 
 
   return (
     <>
@@ -76,7 +75,7 @@ const Signin = () => {
                   onChange={(e) =>
                     setPostInputs((c: any) => ({
                       ...c,
-                      email: e.target.value,
+                      username: e.target.value,
                     }))
                   }
                 />

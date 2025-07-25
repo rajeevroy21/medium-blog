@@ -2,7 +2,7 @@ import { useRecoilValueLoadable } from "recoil";
 import { Appbar } from "../components/Appbar";
 import BlogCard from "../components/BlogCard";
 import { allBlogs } from "../Atoms/BlogAtom";
-import AllBlogSkeleton  from "../components/BlogSkeleton";
+import { AllBlogSkeleton } from "../components/BlogSkeleton";
 
 export type Blog = {
   author: {
@@ -51,25 +51,9 @@ const Blogs = () => {
         ))}
       </>
     );
+  } else if (all_Blogs.state == "hasError") {
+    return <div>...Error fetching data from backend</div>;
   }
-   if (all_Blogs.state === "hasError") {
-    return (
-      <div>
-        <Appbar />
-        <div className="text-red-500 text-center m-5">
-          ...Error fetching data from backend
-        </div>
-      </div>
-    );
-  }
-
-  // Ensure we always return something
-  return (
-    <div>
-      <Appbar />
-      <p className="text-center mt-10">No data available</p>
-    </div>
-  );
 };
 
 export default Blogs;

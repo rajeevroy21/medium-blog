@@ -20,7 +20,7 @@ export const allBlogs = atom({
 export const post_inputs = atom({
   key: "post_Inputs",
   default: {
-    email: "",
+    username: "",
     password: "",
   },
 });

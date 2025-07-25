@@ -46,14 +46,14 @@ This project is a blog website similar to Medium, built with React for the front
 
 1. Clone the repository:
 ```
-   git clone https://github.com/rajeevroy21/medium-blog.git
+   https://github.com/rajeevroy21/medium-blog.git
 ```
 2. Navigate to the project directory:
   ```
   cd Frontend
   ```
 3.Install dependencies:
-   ```
+   ```Piyush5784
    npm i
    ```
 or

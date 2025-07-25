@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import LabeledInput from "../components/LabeledInput";
 import Quote from "../components/Quote";
 import { useState } from "react";
-import { SignupInput } from "@rajeevroy/medium-common";
+import { SignupInput } from "@100xdevs/medium-common";
 import { BACKEND_URL } from "../config";
 import { toast } from "react-hot-toast";
 import axios from "axios";
@@ -11,7 +11,7 @@ import { IoMdArrowRoundBack } from "react-icons/io";
 const Signup = () => {
   const navigate = useNavigate();
   const [postInputs, setPostInputs] = useState<SignupInput>({
-    email: "",
+    username: "",
     password: "",
     name: "",
   });
@@ -20,7 +20,7 @@ const Signup = () => {
     e.preventDefault();
 
     if (
-      postInputs.email == "" ||
+      postInputs.username == "" ||
       postInputs.password == "" ||
       postInputs.name == ""
     ) {
@@ -29,7 +29,7 @@ const Signup = () => {
     try {
       const response = await toast.promise(
         axios.post(`${BACKEND_URL}/api/v1/user/signup`, {
-          email: postInputs.email,
+          username: postInputs.username,
           password: postInputs.password,
           name: postInputs.name,
         }),
@@ -88,7 +88,7 @@ const Signup = () => {
                   onChange={(e) =>
                     setPostInputs((c) => ({
                       ...c,
-                      email: e.target.value,
+                      username: e.target.value,
                     }))
                   }
                 />
